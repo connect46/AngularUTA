@@ -1,0 +1,62 @@
+<!-- Page Header -->
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">
+                                My Clients <small>Clients whose care teams I'm a part of</small>
+                            </h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Home</li>
+                                <li><a class="link-effect" href="clients.html">My Clients</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Header -->
+
+                <!-- Page Content -->
+                <div class="content"  ng-init="initData()">
+                    <!-- My Block -->
+                            <!-- Dynamic Table Full -->
+                    <div class="block">
+                        <div class="block-content">
+                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
+                            <table datatable="ng" dt-options="dtOptions" class="table table-header-bg js-dataTable-full" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>ID</th>
+                                        <th class="hidden-xs">DOB</th>
+                                        <th class="hidden-xs">Gender</th>
+                                        <th class="hidden-xs">Center</th>
+                                        <th class="hidden-xs">Location</th>
+                                        <th style="width: 15%;">Program</th>
+                                        <th class="text-center" style="width: 10%;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="pat in patients">
+                                        <td class="font-w600">{{pat.FirstName+' '+pat.LastName}}</td>
+                                        <td>{{pat.PatientID}}</td>
+                                        <td class="hidden-xs">{{pat.BirthDate}}</td>
+                                        <td class="hidden-xs">{{pat.Gender||'M'}}</td>
+                                        <td class="hidden-xs">{{pat.Center||'Arizona'}}</td>
+                                        <td class="hidden-xs">{{pat.Location||'Maricopa'}}</td>
+                                        <td class="hidden-xs">{{pat.Program||'Community & Family Services'}}</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <!--<a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="recordService.html"><i class="fa fa-eye"></i> </a>-->
+												<a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('recordService');"><i class="fa fa-eye"></i> </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Dynamic Table Full -->
+                    <!-- END My Block -->
+                </div>
+                <!-- END Page Content -->
+            
