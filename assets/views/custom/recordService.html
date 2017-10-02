@@ -585,7 +585,7 @@
                                                                         <th>Program Name</th>
                                                                         <th>Service Item</th>
                                                                         <th>Accumulated Units</th>
-                                                                        <th>Authorized Units</th>
+                                                                        <!--th>Authorized Units</th-->
                                                                         <th>Planned Units</th>
                                                                         <th>Active</th>
                                                                         <th class="text-center">Record Service</th>
@@ -595,9 +595,9 @@
                                                                     <tr>
                                                                         <td>High Needs</td>
                                                                         <td>Case Management</td>
-                                                                        <td>3650</td>
-                                                                        <td><span class="btn btn-danger">3550</span></td>
-                                                                        <td><span class="btn btn-danger">3550</span></td>
+                                                                        <td>3550</td>
+                                                                        <td><span class="btn btn-danger">3650</span></td>
+                                                                        <!--td><span class="btn btn-danger">3550</span></td-->
                                                                         <td><span>Yes</span></td>
                                                                         <td class="text-center">
                                                                             <div class="btn-group">
@@ -610,7 +610,7 @@
                                                                         <td>Group Skills & Development</td>
                                                                         <td>1650</td>
                                                                         <td><span>2000</span></td>
-                                                                        <td><span>2000</span></td>
+                                                                        <!--td><span>2000</span></td-->
                                                                         <td><span>Yes</span></td>
                                                                         <td class="text-center">
                                                                             <div class="btn-group">
@@ -623,7 +623,7 @@
                                                                         <td>Skills Building & Development </td>
                                                                         <td>900</td>
                                                                         <td><span class="btn btn-warning">1000</span></td>
-                                                                        <td><span class="btn btn-warning">1000</span></td>
+                                                                        <!--td><span class="btn btn-warning">1000</span></td-->
                                                                         <td><span>Yes</span></td>
                                                                         <td class="text-center">
                                                                             <div class="btn-group">
@@ -634,9 +634,9 @@
                                                                     <tr>
                                                                         <td>Community & Family Services</td>
                                                                         <td>Case Management</td>
-                                                                        <td>3650</td>
-                                                                        <td><span class="btn btn-danger">3550</span></td>
-                                                                        <td><span class="btn btn-danger">3550</span></td>
+                                                                        <td>3550</td>
+                                                                        <td><span class="btn btn-danger">3650</span></td>
+                                                                        <!--td><span class="btn btn-danger">3550</span></td-->
                                                                         <td><span>Yes</span></td>
                                                                         <td class="text-center">
                                                                             <div class="btn-group">
@@ -649,7 +649,7 @@
                                                                         <td>Contact Note</td>
                                                                         <td>950</td>
                                                                         <td><span>2000</span></td>
-                                                                        <td><span>2000</span></td>
+                                                                        <!--td><span>2000</span></td-->
                                                                         <td><span>Yes</span></td>
                                                                         <td class="text-center">
                                                                             <div class="btn-group">
@@ -662,7 +662,7 @@
                                                                         <td>Family Support</td>
                                                                         <td>900</td>
                                                                         <td><span class="btn btn-warning">1000</span></td>
-                                                                        <td><span class="btn btn-warning">1000</span></td>
+                                                                        <!--td><span class="btn btn-warning">1000</span></td-->
                                                                         <td><span>Yes</span></td>
                                                                         <td class="text-center">
                                                                             <div class="btn-group">
@@ -675,7 +675,7 @@
                                                                         <td>Independent Living</td>
                                                                         <td>850</td>
                                                                         <td><span>2000</span></td>
-                                                                        <td><span>2000</span></td>
+                                                                        <!--td><span>2000</span></td-->
                                                                         <td><span>Yes</span></td>
                                                                         <td class="text-center">
                                                                             <div class="btn-group">
@@ -722,7 +722,7 @@
                                                             <div class="block-content">
                                                                 <form class="form-horizontal push-10-t push-10" action="" method="post" onsubmit="return false;">
                                                                     <div class="row">
-                                                                        <div class="col-sm-12">
+                                                                        <div class="col-sm-10">
                                                                             <div class="form-group">
                                                                                 <div class="col-xs-6">
                                                                                     <!--<div class="js-datetimepicker form-material input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true" data-side-by-side="true">-->
@@ -742,20 +742,14 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="form-group">
-                                                                                <div class="col-xs-6">
-                                                                                    <label >Duration</label>
-                                                                                    <input class="form-control input-md" type="number" id="calculatedDuration" name="calculatedDuration" placeholder="Calculated Duration (mins)">
+                                                                        <div class="col-sm-2">
+                                                                            <div class="form-group">
+                                                                                <div class="col-xs-12">
+                                                                                    <label for="mega-lastname">Duration</label>
+                                                                                    <input class="form-control input-lg" type="text" id="calculatedDuration" name="calculatedDuration" placeholder="Calculated Duration (mins)">
                                                                                 </div>
-                                                                                <div class="col-xs-6">
-                                                                                    <label for="mega-lastname">Units Consumed</label>
-                                                                                    <input class="form-control input-md" type="number" id="calculatedDuration" name="calculatedDuration" placeholder="Calculated units (15 mins = 1 unit)">
-                                                                                </div>                                                                                
                                                                             </div>
                                                                         </div>
-                                                                        
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-sm-6">
@@ -1288,14 +1282,14 @@
                                                             <!-- Transition / discharge plan notes -->
                                                             <div class="block block-bordered">
                                                                 <div class="block-header bg-primary">
-                                                                    <h3 class="block-title">Transition and discharge plan</h3>
+                                                                    <h3 class="block-title">Transition / discharge plan</h3>
                                                                 </div>
                                                                 <div class="block-content">
                                                                     <div class="form-group">
                                                                         <div class="col-xs-12">
                                                                             <div class="form-material floating">
-                                                                                <textarea class="form-control" id="material-textarea-large1" name="material-textarea-large1" rows="8"></textarea>
-                                                                                <label for="material-textarea-large1">Notes</label>
+                                                                                <textarea class="form-control" id="material-textarea-large2" name="material-textarea-large2" rows="8"></textarea>
+                                                                                <label for="material-textarea-large2">Notes</label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1388,7 +1382,7 @@
                                                             <div class="block block-bordered">
                                                                 <div class="block-header bg-primary">
                                                                     <h3 class="block-title">Select Strengths</h3>
-                                                                </div>                       
+                                                                </div>                                                                    
                                                                     <div class="block-content">
                                                                         <table class="js-table-checkable table table-hover">
                                                                             <thead>
