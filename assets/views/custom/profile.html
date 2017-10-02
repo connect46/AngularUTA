@@ -42,7 +42,7 @@
         <!-- END Stats -->
     </div>
     <!-- END User Header -->
- <form action="" method="post" onsubmit="return false;">
+
     <!-- Main Content -->
         <div class="block">
             <ul class="nav nav-tabs nav-justified push-20" data-js-tabs>
@@ -62,9 +62,26 @@
                                 <label>Username</label>
                                 <p class="h3 font-w300">jdoe</p>
                             </div>
+                            <hr>
+                            <div class="col-xs-6">
+                                <label for="profile-firstname">Firstname</label>
+                                <p class="h3 font-w300">John</p>
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="profile-lastname">Lastname</label>
+                                <p class="h3 font-w300">Doe</p>
+                            </div>
+                            <div class="col-xs-12">
+                                <label for="profile-bio">Organization</label>
+                                <p class="h3 font-w300">Devereux AZ</p>
+                            </div>
                             <div class="col-xs-12">
                                 <label for="profile-bio">Role</label>
                                 <p class="h3 font-w300">High Needs Case Manager</p>
+                            </div>
+                            <div class="col-xs-12">
+                                <label for="profile-bio">Supervisor</label>
+                                <p class="h3 font-w300">Lisa Pompa</p>
                             </div>
                             <div class="col-xs-6">
                                 <label for="profile-email">Email Address</label>
@@ -78,29 +95,39 @@
                                 <label for="profile-email">Cell Phone</label>
                                 <p class="h3 font-w300">520.469.2345</p>
                             </div>
-                        </div>                       
+                        </div>
                     </div>
                 </div>
                 <!-- END Personal Tab -->
 
                 <!-- Password Tab -->
-
+                <form>
                 <div class="tab-pane fade" id="tab-profile-password">
                     <div class="row items-push">
                         <div class="col-sm-6 col-sm-offset-3 form-horizontal">
                             <div class="form-group">
                                 <div class="col-xs-12">
-                                    <label for="profile-password">Recover Pin</label>
-                                    <input class="form-control input-lg" type="email" id="profile-email" name="profile-email" placeholder="Enter your email.." >
-                                    <br>
-                                    <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-check push-5-r"></i> Send Request</button>
+                                    <label for="profile-password">Current Pin</label>
+                                    <input class="form-control input-lg" type="password" id="profile-password" name="profile-password">
+                                </div>
                             </div>
+                            <hr>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="profile-password-new">New Password</label>
+                                    <input class="form-control input-lg" type="password" id="profile-password-new" name="profile-password-new">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="profile-password-new-confirm">Confirm New Password</label>
+                                    <input class="form-control input-lg" type="password" id="profile-password-new-confirm" name="profile-password-new-confirm">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-</form>           
+                </form>           
                 <!-- END Password Tab -->
             </div>
         </div>
