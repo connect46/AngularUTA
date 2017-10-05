@@ -1,17 +1,17 @@
  <!-- Page Header -->
                 <div class="content bg-gray-lighter">
                     <div class="row items-push">
-                        <div class="col-sm-7">
+                        <div class="col-sm-12">
                             <h1 class="page-heading">
                                 Pending Progress Notes
                             </h1>
                         </div>
-                        <div class="col-sm-5 text-right hidden-xs">
+                        <!--div class="col-sm-5 text-right hidden-xs">
                             <ol class="breadcrumb push-10-t">
                                 <li>Home</li>
                                 <li><a class="link-effect" href="">Progress Note Documentation</a></li>
                             </ol>
-                        </div>
+                        </div-->
                     </div>
                 </div>
                 <!-- END Page Header -->
@@ -32,7 +32,9 @@
                                         <th>Service Item</th>
                                         <th>PN Template Name</th>
                                         <th class="hidden-xs">Started Date</th>
-                                        <th class="text-center" style="width: 10%;">Due Date</th>
+                                        <th class="text-center">Due Date</th>
+                                        <th class="text-center">Submitted Date</th>
+                                        <td>Status</td>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -44,15 +46,16 @@
                                         <td class="hidden-xs">Community & Family Services</td>
                                         <td class="hidden-xs">Case Management</td>
                                         <td class="hidden-xs">Contact Note</td>
-                                        <td class="hidden-xs">08/25/2017</td>
+                                        <td class="hidden-xs"><b style="color:red">10/05/2017</b></td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">08/28/2017</a>
+                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">10/08/2017</a>
                                             </div>
                                         </td>
+                                        <td>In Progress</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="progressNoteTemplate.html"><i class="fa fa-pencil"></i> </a>
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-pencil"></i>  Edit</a>
                                             </div>
                                         </td>
                                     </tr>
@@ -63,15 +66,16 @@
                                         <td class="hidden-xs">Community & Family Services</td>
                                         <td class="hidden-xs">Case Management</td>
                                         <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">08/25/2017</td>
+                                        <td class="hidden-xs">10/05/2017</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">08/28/2017</a>
+                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">10/08/2017</a>
                                             </div>
                                         </td>
+                                        <td>In Progress</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="progressNoteTemplate.html"><i class="fa fa-pencil"></i> </a>
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-pencil"></i>  Edit </a>
                                             </div>
                                         </td>
                                     </tr> 
@@ -82,15 +86,16 @@
                                         <td class="hidden-xs">Community & Family Services</td>
                                         <td class="hidden-xs">Case Management</td>
                                         <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">08/24/2017</td>
+                                        <td class="hidden-xs">10/04/2017</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-warning" type="button" data-toggle="tooltip" title="Overdue">08/27/2017</a>
+                                                <a class="btn btn-md btn-warning" type="button" data-toggle="tooltip" title="Overdue">10/07/2017</a>
                                             </div>
                                         </td>
+                                        <td>In Progress</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="progressNoteTemplate.html"><i class="fa fa-pencil"></i> </a>
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-pencil"></i>  Edit</a>
                                             </div>
                                         </td>
                                     </tr> 
@@ -101,17 +106,87 @@
                                         <td class="hidden-xs">Community & Family Services</td>
                                         <td class="hidden-xs">Case Management</td>
                                         <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">08/27/2017</td>
+                                        <td class="hidden-xs">10/07/2017</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                09/01/2017
+                                                10/10/2017
                                         </td>
+                                        <td>In Progress</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="progressNoteTemplate.html"><i class="fa fa-pencil"></i> </a>
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-pencil"></i>  Edit </a>
                                             </div>
                                         </td>
                                     </tr> 
+                                    <tr>
+                                        <td class="font-w600">
+                                            <a data-toggle="modal" data-target="#modal-large" type="button">George Carlin</a>
+                                        </td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="hidden-xs">Case Management</td>
+                                        <td class="hidden-xs">Case Contact</td>
+                                        <td class="hidden-xs">10/01/2017</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                10/06/2017
+                                        </td>
+                                        <td>                                            
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-primary" type="button" data-toggle="tooltip" title="Overdue">Submitted</a>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href=""><i class="fa fa-eye"></i>  View </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-w600">
+                                            <a data-toggle="modal" data-target="#modal-large" type="button">Thomas George</a>
+                                        </td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="hidden-xs">Case Management</td>
+                                        <td class="hidden-xs">Case Contact</td>
+                                        <td class="hidden-xs">10/07/2017</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                10/10/2017
+                                        </td>
+                                        <td>                                            
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-primary" type="button" data-toggle="tooltip" title="Overdue">Submitted</a>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href=""><i class="fa fa-eye"></i>  View </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-w600">
+                                            <a data-toggle="modal" data-target="#modal-large" type="button">George Carlin</a>
+                                        </td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="hidden-xs">Case Management</td>
+                                        <td class="hidden-xs">CFT Note</td>
+                                        <td class="hidden-xs">10/07/2017</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                10/10/2017
+                                        </td>
+                                        <td>                                            
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-primary" type="button" data-toggle="tooltip" title="Overdue">Submitted</a>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href=""><i class="fa fa-eye"></i>  View </a>
+                                            </div>
+                                        </td>
+                                    </tr>                                      
                                 </tbody>
                             </table>
                         </div>
