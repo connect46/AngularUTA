@@ -1,0 +1,830 @@
+<div class="block">
+	<div class="block-content">
+		<div class="content bg-gray-lighter">
+		    <div class="row items-push">
+		        <div>
+		            <table class="table table-header-bg">
+		                <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th class="hidden-xs">Program</th>
+                                <th>Service Item</th>
+                                <th>PN Template Name</th>
+                                <th class="text-center">Started Date</th>
+                                <th class="text-center">Due Date</th>
+                                <th class="text-center">Submitted Date</th>
+                                <td>Status</td>
+                            </tr>
+		                </thead>
+		                <tbody>
+                            <tr>
+                                <td><b>Carson Palmer</b></td>
+                                <td class="hidden-xs">CFS</td>
+                                <td class="hidden-xs">Case Management</td>
+                                <td class="hidden-xs">CFT Note</td>
+                                <td class="text-center">10/04/2017</td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">10/07/2017</a>
+                                    </div>
+                                </td>
+                                <td class="text-center"></td> 
+                                <td>In Progress</td>
+                            </tr>  
+		                </tbody>
+		            </table>            
+		        </div>
+		    </div>
+		</div>
+		<form class="grid-form">
+			<fieldset>
+				<legend>Meeting details (Times, location, delivery method)</legend>
+				<div data-row-span="7">
+					<div data-field-span="3">
+					<label>Start Date & Time</label>
+						<div data-js-datetimepicker="{showTodayButton: true, showClear: true, showClose: true, sideBySide: true}" class="js-datetimepicker form-material input-group date">
+	                        <input class="form-control" type="text" id="example-datetimepicker1" name="example-datetimepicker1" placeholder="" value="10/04/2017 8:15 AM">
+	                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+	                    </div>
+					</div>
+					<div data-field-span="3">
+					<label>End Date & Time</label>					
+						<div data-js-datetimepicker="{showTodayButton: true, showClear: true, showClose: true, sideBySide: true}" class="js-datetimepicker form-material input-group date">
+	                        <input class="form-control" type="text" id="example-datetimepicker2" name="example-datetimepicker2" placeholder="" value="10/04/2017 9:15 AM">
+	                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+	                    </div>
+					</div>
+					<div data-field-span="1">
+	                    <div class="col-xs-12">
+	                        <label for="duration">Duration (units)</label>
+	                        <p>60 mins (4 units) </p>
+	                    </div>
+					</div>
+				</div>
+				<div data-row-span="2">
+					<div data-field-span="1">
+						<label>Place Of Service</label>
+		                <div class="form-material">
+		                    <select data-js-select2 class="form-control" id="placeOfService" name="placeOfService" style="width: 100%;" data-placeholder="Choose one.." value="School">
+		                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+		                        <option value="01">Pharmacy</option>
+		                        <option value="03">School</option>
+		                        <option value="04">Homeless Shelter</option>
+		                        <option value="09">Prison/Correction</option>
+		                        <option value="11">Office</option>
+		                        <option value="12">Home</option>
+		                        <option value="13">Assisted Living</option>
+		                        <option value="14">Group Home </option>
+		                        <option value="15">Mobile Unit </option>
+		                        <option value="16">Temporary Lodging </option>
+		                        <option value="21">Inpatient Hospital </option>
+		                        <option value="22">Outpatient Hospital </option>
+		                        <option value="33">Custodial Care </option>
+		                        <option value="51">Inpatient Psych </option>
+		                        <option value="52">Pysch Partial Hosp </option>
+		                        <option value="53">Community MH Center </option>
+		                        <option value="54">ICFMR </option>
+		                        <option value="55">Res. Substance Abuse </option>
+		                        <option value="56">Psych Res Treatment </option>
+		                        <option value="57">Non-Res Subtance </option>
+		                        <option value="99">Other</option>
+		                    </select>
+		                </div>
+					</div>
+					<div data-field-span="1">
+						<label>Delivery Method</label>
+		                <div class="form-material">
+		                    <select data-js-select2 class="form-control" id="deliveryMethod" name="deliveryMethod" style="width: 100%;" data-placeholder="Choose one.." value="Face to Face">
+		                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+		                        <option value="01">Face to Face</option>
+		                        <option value="02">Telephone</option>
+		                        <option value="03">Written</option>
+		                        <option value="04">Video Conference</option>
+		                        <option value="05">Email</option>
+		                    </select>
+		                </div>
+					</div>				
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<legend>Attendees present during service</legend>
+				<div data-row-span="4">
+					<div data-field-span="3">
+						<label>Select Attendees</label>
+			            <table class="table table-hover" data-js-table-checkable>
+			                <thead>
+			                    <tr>
+			                        <th class="text-center" style="width: 10%;">
+			                            <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+			                                <input type="checkbox" id="check-all" name="check-all"><span></span>
+			                            </label>
+			                        </th>
+			                        <th style="width: 30%">Name</th>
+			                        <th class="hidden-xs" style="width: 20%;">Relationship</th>
+			                        <th class="hidden-xs" style="width: 40%;">Contact Info</th>
+			                    </tr>
+			                </thead>
+			                <tbody>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">Jason Arrozo</th>
+								    <th class="hidden-xs" style="width: 20%;">Social Worker / Case Manager </th>
+								    <th class="hidden-xs" style="width: 40%;">(520) 665-1234, (520) 665-1235 </th>
+								</tr>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">Mark Christian</th>
+								    <th class="hidden-xs" style="width: 20%;">Attorney </th>
+								    <th class="hidden-xs" style="width: 40%;">(650) 555-1234 </th>
+								</tr>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">April Lasseter </th>
+								    <th class="hidden-xs" style="width: 20%;">School Official </th>
+								    <th class="hidden-xs" style="width: 40%;">(520) 665-1234 ext.12530 </th>
+								</tr>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">Laurie Johnson </th>
+								    <th class="hidden-xs" style="width: 20%;">Mother</th>
+								    <th class="hidden-xs" style="width: 40%;">(620) 665-1234 </th>
+								</tr>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%"> Mark Johnson </th>
+								    <th class="hidden-xs" style="width: 20%;">Father</th>
+								    <th class="hidden-xs" style="width: 40%;">(620) 665-1235 </th>
+								</tr>
+			                </tbody>
+			            </table>
+					</div>
+					<div data-field-span="1">
+						<label>Add Attendee</label>
+						<label>First Name</label>
+						<input type="text">
+						<label>Last Name</label>
+						<input type="text">					
+						<label>Relationship</label>
+		                <div class="form-material">
+		                    <select data-js-select2 class="form-control" id="patientRelationship" name="patientRelationship" style="width: 100%;" data-placeholder="Choose one.." value="">
+		                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+								<option value="01">Agency Accounts Payable Contact</option>
+								<option value="02">Attorney</option>
+								<option value="03">Aunt</option>
+								<option value="04">Behavior Support</option>
+								<option value="05">Care Giver</option>
+								<option value="06">Chart Holder</option>
+								<option value="07">Child</option>
+								<option value="08">Child Welfare Case Manager (DYFS/DCFS etc.)</option>
+								<option value="09">Client Advocate</option>
+								<option value="10">Clinical Reviewer</option>
+								<option value="11">Clinician / Therapist</option>
+								<option value="12">Conservator / Guardian</option>
+								<option value="13">CPS/APS Case Manager</option>
+								<option value="14">CUA Case Manager</option>
+								<option value="15">DCS Case Manager</option>
+								<option value="16">DDD Case Manager</option>
+								<option value="17">DSS Case Manager</option>
+								<option value="18">Educational Consultant</option>
+								<option value="19">Foster Parent</option>
+								<option value="20">Friend</option>
+								<option value="21">Funder</option>
+								<option value="21">Grandparent</option>
+								<option value="22">High Needs Case Manager</option>
+								<option value="23">Medical Provider</option>
+								<option value="24">Mother</option>
+								<option value="25">Other</option>
+								<option value="26">Other Provider</option>
+								<option value="27">Other Relative</option>
+								<option value="28">Parent</option>
+								<option value="29">Placement Provider</option>
+								<option value="30">Primary Care Provider</option>
+								<option value="31">Probation / Parole Officer</option>
+								<option value="32">Representative Payee</option>
+								<option value="33">School Official</option>
+								<option value="34">School Official Home District</option>
+								<option value="35">School Official LEA</option>
+								<option value="36">Service Coordinator</option>
+								<option value="37">Sibling</option>
+								<option value="38">Significant Other</option>
+								<option value="39">Social Worker / Case Manager</option>
+								<option value="40">Spouse</option>
+								<option value="41">Step Parent</option>
+								<option value="42">Supervisor</option>
+								<option value="43">Support Coordinator</option>
+								<option value="44">Teacher</option>
+								<option value="45">Trust Officer</option>
+								<option value="46">Uncle</option>
+		                    </select>
+		                </div>
+						<label>Contact Phone</label>
+						<input type="text">
+						<br><br>
+						<button class="pull-right btn btn-primary" type="submit" action=""><i class="fa fa-plus"></i> Add Attendee</button>
+						<input type="text">
+					</div>				
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<legend>Team Members present during service</legend>
+				<div data-row-span="4">
+					<div data-field-span="3">
+						<label>Select Team Members</label>
+			            <table class="table table-hover" data-js-table-checkable>
+			                <thead>
+			                    <tr>
+			                        <th class="text-center" style="width: 10%;">
+			                            <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+			                                <input type="checkbox" id="check-all" name="check-all"><span></span>
+			                            </label>
+			                        </th>
+			                        <th style="width: 30%">Name</th>
+			                        <th class="hidden-xs" style="width: 20%;">Relationship</th>
+			                        <th class="hidden-xs" style="width: 40%;">Contact Info</th>
+			                    </tr>
+			                </thead>
+			                <tbody>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">Michelle Thomas </th>
+								    <th class="hidden-xs" style="width: 20%;">Program Manager </th>
+								    <th class="hidden-xs" style="width: 40%;">(520) 665-1234, (520) 665-1235 </th>
+								</tr>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">Eileen Markson </th>
+								    <th class="hidden-xs" style="width: 20%;">Utilization Review </th>
+								    <th class="hidden-xs" style="width: 40%;">(650) 555-1234 </th>
+								</tr>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">Regan Fernandez </th>
+								    <th class="hidden-xs" style="width: 20%;">Clinical Reviewer  </th>
+								    <th class="hidden-xs" style="width: 40%;">(520) 665-1234 ext.12530 </th>
+								</tr>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">Jamie Azkhaban </th>
+								    <th class="hidden-xs" style="width: 20%;">Primary Therapist </th>
+								    <th class="hidden-xs" style="width: 40%;">(620) 665-1234 </th>
+								</tr>
+								<tr>
+								    <th class="text-center" style="width: 10%;">
+								        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+								            <input type="checkbox" id="check-all" name="check-all"><span></span>
+								        </label>
+								    </th>
+								    <th style="width: 30%">Robert Mullen </th>
+								    <th class="hidden-xs" style="width: 20%;">Psychiatrist</th>
+								    <th class="hidden-xs" style="width: 40%;">(620) 665-1235 </th>
+								</tr>
+			                </tbody>
+			            </table>
+					</div>
+					<div data-field-span="1">
+						<label>Add Team Member</label>
+						<label>First Name</label>
+						<input type="text">
+						<label>Last Name</label>
+						<input type="text">					
+						<label>Relationship</label>
+		                <div class="form-material">
+		                    <select data-js-select2 class="form-control" id="patientRelationship" name="patientRelationship" style="width: 100%;" data-placeholder="Choose one.." value="">
+		                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+								<option value="01">	Activity Therapist	</option>
+								<option value="02">	Assistant Clinical Director	</option>
+								<option value="03">	Behavior Analyst	</option>
+								<option value="04">	Behavior Coach	</option>
+								<option value="05">	Behavior Specialist	</option>
+								<option value="06">	Behavior Specialist Consultant	</option>
+								<option value="07">	Behavior Specialist Consultant Rapid Response	</option>
+								<option value="08">	Case Coordinator	</option>
+								<option value="09">	Case Manager	</option>
+								<option value="10">	Case Manager - Old	</option>
+								<option value="11">	Clinical Director	</option>
+								<option value="12">	Clinical Intern	</option>
+								<option value="13">	Clinical Reviewer	</option>
+								<option value="14">	Clinical Supervisor	</option>
+								<option value="15">	Community Inclusion Specialist	</option>
+								<option value="16">	Community Program Administrator	</option>
+								<option value="17">	Day Program Primary Group	</option>
+								<option value="18">	Doctor	</option>
+								<option value="19">	Family Support Counselor	</option>
+								<option value="20">	Family Support Partner	</option>
+								<option value="21">	Family Support Specialist	</option>
+								<option value="22">	Foster Care Family	</option>
+								<option value="23">	Foster Care Specialist	</option>
+								<option value="24">	Group Therapist	</option>
+								<option value="25">	High Needs Case Manager	</option>
+								<option value="26">	Human Service Professional	</option>
+								<option value="27">	Intake Assessor	</option>
+								<option value="28">	Lead Behavior Coach	</option>
+								<option value="29">	Mobile Therapist	</option>
+								<option value="30">	Mobile Therapist Rapid Response	</option>
+								<option value="31">	Network	</option>
+								<option value="32">	Nurse	</option>
+								<option value="33">	Nurse Manager	</option>
+								<option value="34">	Parent Aide	</option>
+								<option value="35">	Parent Partner	</option>
+								<option value="36">	Physician Assistant	</option>
+								<option value="37">	Primary Therapist	</option>
+								<option value="38">	Program Administrator	</option>
+								<option value="39">	Program Consultant	</option>
+								<option value="40">	Program Coordinator	</option>
+								<option value="41">	Program Director	</option>
+								<option value="42">	Program Manager	</option>
+								<option value="43">	Program Specialist	</option>
+								<option value="44">	Psychiatrist	</option>
+								<option value="45">	Psychologist	</option>
+								<option value="46">	QIDP	</option>
+								<option value="47">	Residential Supervisor	</option>
+								<option value="48">	Secondary Therapist	</option>
+								<option value="49">	Social Worker, MSW	</option>
+								<option value="50">	Special Education Coordinator	</option>
+								<option value="51">	Substance Abuse Therapist	</option>
+								<option value="52">	Supervisor	</option>
+								<option value="53">	Targeted Case Manager	</option>
+								<option value="54">	Teacher	</option>
+								<option value="55">	Therapeutic Staff Support	</option>
+								<option value="56">	Treatment Plan Coordinator	</option>
+								<option value="57">	Utilization Review	</option>
+								<option value="58">	Youth Support Partner	</option>
+		                    </select>
+		                </div>
+						<label>Contact Phone</label>
+						<input type="text">
+						<br><br>
+						<button class="pull-right btn btn-primary" type="submit" action=""><i class="fa fa-plus"></i> Add Team Member</button>
+						<input type="text">
+					</div>				
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<legend>Meeting Elements</legend>
+				<div data-row-span="1">
+					<div data-field-span="1">
+						<label>Select Meeting Elements</label>
+						<label><input type="checkbox"> Introductions</label><br>
+						<label><input type="checkbox"> Review Confidentiality and its limits </label><br>
+						<label><input type="checkbox"> Review meeting ground rules </label><br>
+						<label><input type="checkbox"> Review today's meeting objectives </label> <br>
+						<label><input type="checkbox"> Review and update SNCD </label><br>	
+						<label><input type="checkbox"> Review supports / crisis plan </label><br>
+					</div>
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<legend>Targeted Areas of Concern</legend>
+				<div data-row-span="1">
+					<div data-field-span="1">
+						<label>Select Targeted Areas of Concern</label>
+						<label><input type="checkbox"> Basic needs / financial </label><br>
+						<label><input type="checkbox"> Living situation </label><br>
+						<label><input type="checkbox"> Crisis Safety</label><br>
+						<label><input type="checkbox"> Medical</label><br>
+						<label><input type="checkbox"> Cultural / spiritual </label><br>
+						<label><input type="checkbox"> Psychological / psychiatric </label><br>
+						<label><input type="checkbox"> Educational / vocational </label><br>
+						<label><input type="checkbox"> Social / community </label><br>
+						<label><input type="checkbox"> Family</label><br>
+						<label><input type="checkbox"> Legal</label><br>
+						<label><input type="checkbox"> Transition to adulthood </label><br>
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<legend>Goal Selections</legend>
+				<div data-row-span="1">
+					<div data-field-span="1">
+						<label>Select Goals</label>
+	                <table class="js-table-checkable table table-hover">
+	                    <tbody>
+	                        <tr>
+	                            <td class="text-center">
+	                                <label class="css-input css-checkbox css-checkbox-primary">
+	                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+	                                </label>
+	                            </td>
+	                            <td><p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla.</p>
+
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="text-center">
+	                                <label class="css-input css-checkbox css-checkbox-primary">
+	                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+	                                </label>
+	                            </td>                                                
+	                            <td><p>Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent.</p>
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="text-center">
+	                                <label class="css-input css-checkbox css-checkbox-primary">
+	                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+	                                </label>
+	                            </td>
+	                            <td><p>Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est.</p>
+
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="text-center">
+	                                <label class="css-input css-checkbox css-checkbox-primary">
+	                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+	                                </label>
+	                            </td>
+	                            <td><p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id.</p>
+
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="text-center">
+	                                <label class="css-input css-checkbox css-checkbox-primary">
+	                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+	                                </label>
+	                            </td>
+	                            <td><p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac.</p>
+
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="text-center">
+	                                <label class="css-input css-checkbox css-checkbox-primary">
+	                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+	                                </label>
+	                            </td>
+	                            <td><p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia.</p>
+
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="text-center">
+	                                <label class="css-input css-checkbox css-checkbox-primary">
+	                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+	                                </label>
+	                            </td>
+	                            <td><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt congue sed ut dui. Morbi malesuada nulla.</p>
+
+	                            </td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+					</div>
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<legend>Strength Selection</legend>
+				<div data-row-span="1">
+					<div data-field-span="1">
+						<label>Select Strengths</label>
+		                <table class="js-table-checkable table table-hover">
+		                    <thead>
+		                        <tr>
+		                            <th class="text-center" style="width: 70px;">
+		                                <!--label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+		                                    <input type="checkbox" id="check-all" name="check-all"><span></span>
+		                                </label-->
+		                            </th>
+		                            <th>Code </th>
+		                            <th>Description</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td class="text-center">
+		                                <label class="css-input css-checkbox css-checkbox-primary">
+		                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+		                                </label>
+		                            </td>
+		                            <td>Succeeds at school
+		                            </td>
+		                            <td><p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac.</p>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td class="text-center">
+		                                <label class="css-input css-checkbox css-checkbox-primary">
+		                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+		                                </label>
+		                            </td>
+		                            <td>Friendly
+		                            </td>
+		                            <td><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus.</p>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td class="text-center">
+		                                <label class="css-input css-checkbox css-checkbox-primary">
+		                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+		                                </label>
+		                            </td>
+		                            <td>Self confidence
+		                            </td>
+		                            <td><p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare.</p>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td class="text-center">
+		                                <label class="css-input css-checkbox css-checkbox-primary">
+		                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+		                                </label>
+		                            </td>
+		                            <td>Insightful
+		                            </td>
+		                            <td><p>Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.</p>
+		                            </td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		        </div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<div data-row-span="1">
+					<legend>What are the strengths and progress noted since the last CFT meeting?</legend>
+					<div data-field-span="1">
+		                <div class="form-material floating">
+		                    <textarea class="form-control" id="strengthsAndProgress" name="strengthsAndProgress" rows="8"></textarea>
+		                    <label for="strengthsAndProgress">Notes</label>
+		                </div>					
+					</div>
+					
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<div data-row-span="1">
+					<legend>Diagnosis Summary</legend>
+					<div data-field-span="1">
+						<table class="table table-vcenter">
+			                <thead>
+			                    <tr>
+			                        <th>Diagnosis Code</th>
+			                        <th>Description</th>
+			                        <th>Active</th>
+			                        <th class="hidden-xs">Diagnosis Date</th>
+			                    </tr>
+			                </thead>
+			                <tbody>
+			                    <tr>
+			                        <td>F34.81
+			                        </td>
+			                        <td>Disruptive Mood Dysregulation Disorder
+			                        </td>
+			                        <td>Active
+			                        </td>
+			                        <td>11/30/2002
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <td>F12.20
+			                        </td>
+			                        <td>Cannabis Use Disorder, Severe
+			                        </td>
+			                        <td>Active
+			                        </td>
+			                        <td>11/30/2004
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <td>F42.1
+			                        </td>
+			                        <td>Obsessive Complusive Disorder
+			                        </td>
+			                        <td>Inactive
+			                        </td>
+			                        <td>09/01/2001
+			                        </td>
+			                    </tr>
+			                </tbody>
+			            </table>
+					</div>	
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<div data-row-span="1">
+					<legend>Medications Summary</legend>				
+					<div data-field-span="1">
+			            <table class="table table-vcenter">
+			                <thead>
+			                    <tr>
+			                        <th>Medication Name</th>
+			                        <th>Dose / Instructions</th>
+			                        <th>Rx Date</th>
+			                        <th>Rx for</th>
+			                        <th>Active</th>
+			                        <th class="hidden-xs">Prescriber</th>
+			                    </tr>
+			                </thead>
+			                <tbody>
+			                    <tr>
+			                        <td>Fluticasone
+			                        </td>
+			                        <td>50 mcg/actuation spary, suspension - 1 spray into both nostrils once a day
+			                        </td>
+			                        <td>06/30/2017
+			                        </td>
+			                        <td>Shortness of breath
+			                        </td>
+			                        <td>Yes</td>
+			                        <td>Robert Pardee, DO, BHP</td>
+			                    </tr>
+			                    <tr>
+			                        <td>Guanfacine
+			                        </td>
+			                        <td>1 mg tablet - 1 tablet by mouth three times a day
+			                        </td>
+			                        <td>06/30/2017
+			                        </td>
+			                        <td>Impulse Anxiety
+			                        </td>
+			                        <td>Yes</td>
+			                        <td>Robert Pardee, DO, BHP</td>
+			                    </tr>
+			                    <tr>
+			                        <td>Lithium Carbonate
+			                        </td>
+			                        <td>450 mg tablet extended release - 1 tablet by mouth twice a day
+			                        </td>
+			                        <td>06/30/2017
+			                        </td>
+			                        <td>Mood, Agitation
+			                        </td>
+			                        <td>Yes</td>
+			                        <td>Robert Pardee, DO, BHP</td>
+			                    </tr>
+			                    <tr>
+			                        <td>Seroquel
+			                        </td>
+			                        <td>100 mg tablet - 1 1/2 tablet by mouth at bedtime
+			                        </td>
+			                        <td>06/30/2016
+			                        </td>
+			                        <td>Mood, Agitation
+			                        </td>
+			                        <td>No</td>
+			                        <td>Robert Pardee, DO, BHP</td>
+			                    </tr>
+			                </tbody>
+			            </table>   					
+					</div>	
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<div data-row-span="1">
+					<legend>Vitals Summary</legend>				
+					<div data-field-span="1">
+	                    <div class="col-lg-6">
+	                        <!-- Bars -->
+	                        <div class="block">
+	                            <div class="block-content">
+	                                <div class="row items-push-2x text-center">
+	                                    <div class="col-xs-6 col-sm-4">
+	                                        <!-- Sparkline Bar 1 Container -->
+	                                        <span class="js-slc-bar1">23,24,20,22,23,25,24,25</span>
+	                                        <div class="push-10-t"><i class="text-muted"></i> BMI</div>
+	                                    </div>
+	                                    <div class="col-xs-6 col-sm-4">
+	                                        <!-- Sparkline Bar 2 Container -->
+	                                        <span class="js-slc-bar2">66,83,81,75,83,82,80,82</span>
+	                                        <div class="push-10-t"><i class="text-muted"></i> Pulse (child)</div>
+	                                    </div>
+	                                    <div class="col-xs-12 col-sm-4">
+	                                        <!-- Sparkline Bar 3 Container -->
+	                                        <span class="js-slc-bar3">20,22,22,24,26,24,28,24</span>
+	                                        <div class="push-10-t"><i class="text-muted"></i> Respiration</div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- END Bars -->
+	                    </div>
+	                    <div class="col-lg-6">
+	                        <!-- Lines -->
+	                        <div class="block">
+	                            <div class="block-content">
+	                                <div class="row items-push-2x text-center">
+	                                    <div class="col-xs-6 col-sm-4">
+	                                        <!-- Sparkline Line 1 Container -->
+	                                        <span class="js-slc-line1">134,140,116,128,116,140,145</span>
+	                                        <div class="push-10-t"><i class="text-muted"></i> Weight</div>
+	                                    </div>
+	                                    <div class="col-xs-6 col-sm-4">
+	                                        <!-- Sparkline Line 2 Container -->
+	                                        <span class="js-slc-line2">64,64,64,64,64,64,64,64</span>
+	                                        <div class="push-10-t"><i class="text-muted"></i> Height</div>
+	                                    </div>
+	                                    <div class="col-xs-12 col-sm-4">
+	                                        <!-- Sparkline Line 3 Container -->
+	                                        <span class="js-slc-line3">99,100,101,101,99,101,100,100</span>
+	                                        <div class="push-10-t"><i class="text-muted"></i> Temperature</div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- END Lines -->
+	                    </div>
+					</div>	
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<div data-row-span="1">
+					<legend>Health, Medical and Nutritional Concerns</legend>				
+					<div data-field-span="1">
+	                        <div class="form-material floating">
+	                            <textarea class="form-control" id="healthMedicalNutritionalConcerns" name="healthMedicalNutritionalConcerns" rows="8"></textarea>
+	                            <label for="healthMedicalNutritionalConcerns">Notes</label>
+	                        </div>
+					</div>	
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<div data-row-span="1">
+					<legend>Brainstorming for the meeting (What are current areas of concern and unresolved challenges to increased family independence?)</legend>				
+					<div data-field-span="1">
+	                        <div class="form-material floating">
+	                            <textarea class="form-control" id="brainstorming" name="brainstorming" rows="8"></textarea>
+	                            <label for="brainstorming">Notes</label>
+	                        </div>
+					</div>	
+				</div>
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<div data-row-span="2">
+					<legend>Date and location of next review</legend>
+					<div data-field-span="1">
+	                    <div data-js-datetimepicker="{showTodayButton: true, showClear: true, showClose: true, sideBySide: true}" class="js-datetimepicker form-material input-group date">
+	                        <input class="form-control" type="text" id="example-datetimepicker1" name="example-datetimepicker1" placeholder="Choose a date and time..">
+	                        <label for="example-datetimepicker1">Start Date & Time</label>
+	                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+	                    </div>
+					</div>
+					<div data-field-span="1">
+						<label for="locationOfNextMeeting">Location of Next Meeting</label>						
+						<input type="text" id="locationOfNextMeeting">
+					</div>
+				</div>
+			</fieldset>
+			<br><br><br>
+		</form>
+	    <div class="block-content block-content-mini block-content-full ">
+	        <div class="row">
+	            <!--div class="col-xs-6">
+	                <button class="wizard-prev btn btn-warning" type="button"><i class="fa fa-arrow-circle-o-left"></i> Previous</button>
+	            </div-->
+	            <div class="pull-right">
+	                <button class="wizard-finish btn btn-danger" type="submit" action=""><i class="fa fa-cloud-upload"></i> Submit to ODS</button>
+	                <button class="wizard-finish btn btn-primary" type="submit" action=""><i class="fa fa-check-circle-o"></i> Add to Queue</button>
+	            </div>
+	        </div>
+	    </div>		
+	</div>
+</div>
