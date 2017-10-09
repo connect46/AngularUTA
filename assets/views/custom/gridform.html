@@ -1,0 +1,1156 @@
+<div class="block">
+	<div class="block-content">
+		<div class="content bg-gray-lighter">
+    <div class="row items-push">
+        <!--div class="col-sm-12 text-right hidden-xs">
+            <ol class="breadcrumb push-10-t">
+                <li>Home</li>
+                <li><a class="link-effect" href="clients.html">My Clients</a></li>
+                <li><a class="link-effect" href="recordService.html">Record Service</a></li>
+            </ol>
+        </div-->
+        <div>
+            <table class="table table-header-bg">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th class="hidden-xs">Program</th>
+                        <th>Service Item</th>
+                        <th>PN Template Name</th>
+                        <th class="hidden-xs">Started Date</th>
+                        <th class="text-center" style="width: 10%;">Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-w600">
+                            <a data-toggle="modal" data-target="#modal-large" type="button">Carson Palmer</a>
+                        </td>
+                        <td class="hidden-xs">Community & Family Services</td>
+                        <td class="hidden-xs">Case Management</td>
+                        <td class="hidden-xs">CFT Note</td>
+                        <td class="hidden-xs">10/04/2017</td>
+                        <td class="text-center">
+                            <div class="btn-group">
+                                <a class="btn btn-md btn-warning" type="button" data-toggle="tooltip" title="Overdue">10/07/2017</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+    </div>
+</div>
+	<form class="grid-form">
+		<fieldset>
+			<legend>Meeting details (Times, location, delivery method)</legend>
+			<div data-row-span="7">
+				<div data-field-span="3">
+				<label>Start Date & Time</label>
+					<div data-js-datetimepicker="{showTodayButton: true, showClear: true, showClose: true, sideBySide: true}" class="js-datetimepicker form-material input-group date">
+                        <input class="form-control" type="text" id="example-datetimepicker1" name="example-datetimepicker1" placeholder="Choose a date and time.." value="10/04/2017 8:15 AM">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+				</div>
+				<div data-field-span="3">
+				<label>End Date & Time</label>					
+					<div data-js-datetimepicker="{showTodayButton: true, showClear: true, showClose: true, sideBySide: true}" class="js-datetimepicker form-material input-group date">
+                        <input class="form-control" type="text" id="example-datetimepicker2" name="example-datetimepicker2" placeholder="Choose a date and time.." value="10/04/2017 9:15 AM">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+				</div>
+				<div data-field-span="1">
+                    <div class="col-xs-12">
+                        <label for="duration">Duration (units)</label>
+                        <p>60 mins (4 units) </p>
+                    </div>
+				</div>
+			</div>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>Place Of Service</label>
+	                <div class="form-material">
+	                    <select data-js-select2 class="form-control" id="placeOfService" name="placeOfService" style="width: 100%;" data-placeholder="Choose one.." value="School">
+	                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+	                        <option value="01">Pharmacy</option>
+	                        <option value="03">School</option>
+	                        <option value="04">Homeless Shelter</option>
+	                        <option value="09">Prison/Correction</option>
+	                        <option value="11">Office</option>
+	                        <option value="12">Home</option>
+	                        <option value="13">Assisted Living</option>
+	                        <option value="14">Group Home </option>
+	                        <option value="15">Mobile Unit </option>
+	                        <option value="16">Temporary Lodging </option>
+	                        <option value="21">Inpatient Hospital </option>
+	                        <option value="22">Outpatient Hospital </option>
+	                        <option value="33">Custodial Care </option>
+	                        <option value="51">Inpatient Psych </option>
+	                        <option value="52">Pysch Partial Hosp </option>
+	                        <option value="53">Community MH Center </option>
+	                        <option value="54">ICFMR </option>
+	                        <option value="55">Res. Substance Abuse </option>
+	                        <option value="56">Psych Res Treatment </option>
+	                        <option value="57">Non-Res Subtance </option>
+	                        <option value="99">Other</option>
+	                    </select>
+	                </div>
+				</div>
+				<div data-field-span="1">
+					<label>Delivery Method</label>
+	                <div class="form-material">
+	                    <select data-js-select2 class="form-control" id="deliveryMethod" name="deliveryMethod" style="width: 100%;" data-placeholder="Choose one.." value="Face to Face">
+	                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+	                        <option value="01">Face to Face</option>
+	                        <option value="02">Telephone</option>
+	                        <option value="03">Written</option>
+	                        <option value="04">Video Conference</option>
+	                        <option value="05">Email</option>
+	                    </select>
+	                </div>
+				</div>				
+			</div>
+		</fieldset>
+		<br><br><br>
+		<fieldset>
+			<legend>Attendees present during service</legend>
+			<div data-row-span="4">
+				<div data-field-span="3">
+					<label>Select Attendees</label>
+		            <table class="table table-hover" data-js-table-checkable>
+		                <thead>
+		                    <tr>
+		                        <th class="text-center" style="width: 10%;">
+		                            <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+		                                <input type="checkbox" id="check-all" name="check-all"><span></span>
+		                            </label>
+		                        </th>
+		                        <th style="width: 30%">Name</th>
+		                        <th class="hidden-xs" style="width: 20%;">Relationship</th>
+		                        <th class="hidden-xs" style="width: 40%;">Contact Info</th>
+		                    </tr>
+		                </thead>
+		                <tbody>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">Jason Arrozo</th>
+							    <th class="hidden-xs" style="width: 20%;">Social Worker / Case Manager </th>
+							    <th class="hidden-xs" style="width: 40%;">(520) 665-1234, (520) 665-1235 </th>
+							</tr>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">Mark Christian</th>
+							    <th class="hidden-xs" style="width: 20%;">Attorney </th>
+							    <th class="hidden-xs" style="width: 40%;">(650) 555-1234 </th>
+							</tr>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">April Lasseter </th>
+							    <th class="hidden-xs" style="width: 20%;">School Official </th>
+							    <th class="hidden-xs" style="width: 40%;">(520) 665-1234 ext.12530 </th>
+							</tr>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">Laurie Johnson </th>
+							    <th class="hidden-xs" style="width: 20%;">Mother</th>
+							    <th class="hidden-xs" style="width: 40%;">(620) 665-1234 </th>
+							</tr>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%"> Mark Johnson </th>
+							    <th class="hidden-xs" style="width: 20%;">Father</th>
+							    <th class="hidden-xs" style="width: 40%;">(620) 665-1235 </th>
+							</tr>
+		                </tbody>
+		            </table>
+				</div>
+				<div data-field-span="1">
+					<label>Add Attendee</label>
+					<label>First Name</label>
+					<input type="text">
+					<label>Last Name</label>
+					<input type="text">					
+					<label>Relationship</label>
+	                <div class="form-material">
+	                    <select data-js-select2 class="form-control" id="patientRelationship" name="patientRelationship" style="width: 100%;" data-placeholder="Choose one.." value="">
+	                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+							<option value="01">Agency Accounts Payable Contact</option>
+							<option value="02">Attorney</option>
+							<option value="03">Aunt</option>
+							<option value="04">Behavior Support</option>
+							<option value="05">Care Giver</option>
+							<option value="06">Chart Holder</option>
+							<option value="07">Child</option>
+							<option value="08">Child Welfare Case Manager (DYFS/DCFS etc.)</option>
+							<option value="09">Client Advocate</option>
+							<option value="10">Clinical Reviewer</option>
+							<option value="11">Clinician / Therapist</option>
+							<option value="12">Conservator / Guardian</option>
+							<option value="13">CPS/APS Case Manager</option>
+							<option value="14">CUA Case Manager</option>
+							<option value="15">DCS Case Manager</option>
+							<option value="16">DDD Case Manager</option>
+							<option value="17">DSS Case Manager</option>
+							<option value="18">Educational Consultant</option>
+							<option value="19">Foster Parent</option>
+							<option value="20">Friend</option>
+							<option value="21">Funder</option>
+							<option value="21">Grandparent</option>
+							<option value="22">High Needs Case Manager</option>
+							<option value="23">Medical Provider</option>
+							<option value="24">Mother</option>
+							<option value="25">Other</option>
+							<option value="26">Other Provider</option>
+							<option value="27">Other Relative</option>
+							<option value="28">Parent</option>
+							<option value="29">Placement Provider</option>
+							<option value="30">Primary Care Provider</option>
+							<option value="31">Probation / Parole Officer</option>
+							<option value="32">Representative Payee</option>
+							<option value="33">School Official</option>
+							<option value="34">School Official Home District</option>
+							<option value="35">School Official LEA</option>
+							<option value="36">Service Coordinator</option>
+							<option value="37">Sibling</option>
+							<option value="38">Significant Other</option>
+							<option value="39">Social Worker / Case Manager</option>
+							<option value="40">Spouse</option>
+							<option value="41">Step Parent</option>
+							<option value="42">Supervisor</option>
+							<option value="43">Support Coordinator</option>
+							<option value="44">Teacher</option>
+							<option value="45">Trust Officer</option>
+							<option value="46">Uncle</option>
+	                    </select>
+	                </div>
+					<label>Contact Phone</label>
+					<input type="text">
+					<br><br>
+					<button class="pull-right btn btn-primary" type="submit" action=""><i class="fa fa-plus"></i> Add Attendee</button>
+					<input type="text">
+				</div>				
+			</div>
+		</fieldset>
+		<br><br><br>
+		<fieldset>
+			<legend>Team Members present during service</legend>
+			<div data-row-span="4">
+				<div data-field-span="3">
+					<label>Select Team Members</label>
+		            <table class="table table-hover" data-js-table-checkable>
+		                <thead>
+		                    <tr>
+		                        <th class="text-center" style="width: 10%;">
+		                            <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+		                                <input type="checkbox" id="check-all" name="check-all"><span></span>
+		                            </label>
+		                        </th>
+		                        <th style="width: 30%">Name</th>
+		                        <th class="hidden-xs" style="width: 20%;">Relationship</th>
+		                        <th class="hidden-xs" style="width: 40%;">Contact Info</th>
+		                    </tr>
+		                </thead>
+		                <tbody>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">Michelle Thomas </th>
+							    <th class="hidden-xs" style="width: 20%;">Program Manager </th>
+							    <th class="hidden-xs" style="width: 40%;">(520) 665-1234, (520) 665-1235 </th>
+							</tr>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">Eileen Markson </th>
+							    <th class="hidden-xs" style="width: 20%;">Utilization Review </th>
+							    <th class="hidden-xs" style="width: 40%;">(650) 555-1234 </th>
+							</tr>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">Regan Fernandez </th>
+							    <th class="hidden-xs" style="width: 20%;">Clinical Reviewer  </th>
+							    <th class="hidden-xs" style="width: 40%;">(520) 665-1234 ext.12530 </th>
+							</tr>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">Jamie Azkhaban </th>
+							    <th class="hidden-xs" style="width: 20%;">Primary Therapist </th>
+							    <th class="hidden-xs" style="width: 40%;">(620) 665-1234 </th>
+							</tr>
+							<tr>
+							    <th class="text-center" style="width: 10%;">
+							        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+							            <input type="checkbox" id="check-all" name="check-all"><span></span>
+							        </label>
+							    </th>
+							    <th style="width: 30%">Robert Mullen </th>
+							    <th class="hidden-xs" style="width: 20%;">Psychiatrist</th>
+							    <th class="hidden-xs" style="width: 40%;">(620) 665-1235 </th>
+							</tr>
+		                </tbody>
+		            </table>
+				</div>
+				<div data-field-span="1">
+					<label>Add Team Member</label>
+					<label>First Name</label>
+					<input type="text">
+					<label>Last Name</label>
+					<input type="text">					
+					<label>Relationship</label>
+	                <div class="form-material">
+	                    <select data-js-select2 class="form-control" id="patientRelationship" name="patientRelationship" style="width: 100%;" data-placeholder="Choose one.." value="">
+	                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+							<option value="01">	Activity Therapist	</option>
+							<option value="02">	Assistant Clinical Director	</option>
+							<option value="03">	Behavior Analyst	</option>
+							<option value="04">	Behavior Coach	</option>
+							<option value="05">	Behavior Specialist	</option>
+							<option value="06">	Behavior Specialist Consultant	</option>
+							<option value="07">	Behavior Specialist Consultant Rapid Response	</option>
+							<option value="08">	Case Coordinator	</option>
+							<option value="09">	Case Manager	</option>
+							<option value="10">	Case Manager - Old	</option>
+							<option value="11">	Clinical Director	</option>
+							<option value="12">	Clinical Intern	</option>
+							<option value="13">	Clinical Reviewer	</option>
+							<option value="14">	Clinical Supervisor	</option>
+							<option value="15">	Community Inclusion Specialist	</option>
+							<option value="16">	Community Program Administrator	</option>
+							<option value="17">	Day Program Primary Group	</option>
+							<option value="18">	Doctor	</option>
+							<option value="19">	Family Support Counselor	</option>
+							<option value="20">	Family Support Partner	</option>
+							<option value="21">	Family Support Specialist	</option>
+							<option value="22">	Foster Care Family	</option>
+							<option value="23">	Foster Care Specialist	</option>
+							<option value="24">	Group Therapist	</option>
+							<option value="25">	High Needs Case Manager	</option>
+							<option value="26">	Human Service Professional	</option>
+							<option value="27">	Intake Assessor	</option>
+							<option value="28">	Lead Behavior Coach	</option>
+							<option value="29">	Mobile Therapist	</option>
+							<option value="30">	Mobile Therapist Rapid Response	</option>
+							<option value="31">	Network	</option>
+							<option value="32">	Nurse	</option>
+							<option value="33">	Nurse Manager	</option>
+							<option value="34">	Parent Aide	</option>
+							<option value="35">	Parent Partner	</option>
+							<option value="36">	Physician Assistant	</option>
+							<option value="37">	Primary Therapist	</option>
+							<option value="38">	Program Administrator	</option>
+							<option value="39">	Program Consultant	</option>
+							<option value="40">	Program Coordinator	</option>
+							<option value="41">	Program Director	</option>
+							<option value="42">	Program Manager	</option>
+							<option value="43">	Program Specialist	</option>
+							<option value="44">	Psychiatrist	</option>
+							<option value="45">	Psychologist	</option>
+							<option value="46">	QIDP	</option>
+							<option value="47">	Residential Supervisor	</option>
+							<option value="48">	Secondary Therapist	</option>
+							<option value="49">	Social Worker, MSW	</option>
+							<option value="50">	Special Education Coordinator	</option>
+							<option value="51">	Substance Abuse Therapist	</option>
+							<option value="52">	Supervisor	</option>
+							<option value="53">	Targeted Case Manager	</option>
+							<option value="54">	Teacher	</option>
+							<option value="55">	Therapeutic Staff Support	</option>
+							<option value="56">	Treatment Plan Coordinator	</option>
+							<option value="57">	Utilization Review	</option>
+							<option value="58">	Youth Support Partner	</option>
+	                    </select>
+	                </div>
+					<label>Contact Phone</label>
+					<input type="text">
+					<br><br>
+					<button class="pull-right btn btn-primary" type="submit" action=""><i class="fa fa-plus"></i> Add Team Member</button>
+					<input type="text">
+				</div>				
+			</div>
+		</fieldset>
+		<br><br><br>
+		<fieldset>
+			<legend>Meeting Elements</legend>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>Select Meeting Elements</label>
+					<label><input type="checkbox"> Introductions</label><br>
+					<label><input type="checkbox"> Review Confidentiality and its limits </label><br>
+					<label><input type="checkbox"> Review meeting ground rules </label><br>
+					<label><input type="checkbox"> Review today's meeting objectives </label> <br>
+					<label><input type="checkbox"> Review and update SNCD </label><br>	
+					<label><input type="checkbox"> Review supports / crisis plan </label><br>
+				</div>
+			</div>
+		</fieldset>
+		<br><br><br>
+		<fieldset>
+			<legend>Targeted Areas of Concern</legend>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>Select Targeted Areas of Concern</label>
+					<label><input type="checkbox"> Basic needs / financial </label><br>
+					<label><input type="checkbox"> Living situation </label><br>
+					<label><input type="checkbox"> Crisis Safety</label><br>
+					<label><input type="checkbox"> Medical</label><br>
+					<label><input type="checkbox"> Cultural / spiritual </label><br>
+					<label><input type="checkbox"> Psychological / psychiatric </label><br>
+					<label><input type="checkbox"> Educational / vocational </label><br>
+					<label><input type="checkbox"> Social / community </label><br>
+					<label><input type="checkbox"> Family</label><br>
+					<label><input type="checkbox"> Legal</label><br>
+					<label><input type="checkbox"> Transition to adulthood </label><br>
+			</div>
+		</fieldset>
+		<br><br><br>
+		<fieldset>
+			<legend>Goal Selections</legend>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>Select Goals</label>
+                <table class="js-table-checkable table table-hover">
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td><p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla.</p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>                                                
+                            <td><p>Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td><p>Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est.</p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td><p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id.</p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td><p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac.</p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td><p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia.</p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt congue sed ut dui. Morbi malesuada nulla.</p>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+				</div>
+			</div>
+		</fieldset>
+		<br><br><br>
+		<fieldset>
+			<legend>Strength Selection</legend>
+                <table class="js-table-checkable table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center" style="width: 70px;">
+                                <!--label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+                                    <input type="checkbox" id="check-all" name="check-all"><span></span>
+                                </label-->
+                            </th>
+                            <th>Code </th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td>Succeeds at school
+                            </td>
+                            <td><p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td>Friendly
+                            </td>
+                            <td><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td>Self confidence
+                            </td>
+                            <td><p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <label class="css-input css-checkbox css-checkbox-primary">
+                                    <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                </label>
+                            </td>
+                            <td>Insightful
+                            </td>
+                            <td><p>Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+		</fieldset>
+		<br><br><br>
+		<fieldset>
+			
+		</fieldset>
+		<br><br><br>
+
+			<div data-row-span="4">
+				<div data-field-span="1">
+					<label>Title</label>
+					<input id="r1" name="customer-title" type="radio"><label for="r1"> Mr.</label>
+					<input id="r2" name="customer-title" type="radio"><label for="r2"> Mrs.</label>  
+					<input id="r3" name="customer-title" type="radio"><label for="r3"> Ms.</label>
+				</div>
+				<div data-field-span="3">
+					<label>Full Name</label>
+					<input type="text">
+				</div>
+			</div>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>Date of birth</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Nationality</label>
+					<select>
+						<option value="Afghanistan" title="Afghanistan">Afghanistan</option>
+						<option value="Åland Islands" title="Åland Islands">Aland Islands</option>
+						<option value="Albania" title="Albania">Albania</option>
+						<option value="Algeria" title="Algeria">Algeria</option>
+						<option value="American Samoa" title="American Samoa">American Samoa</option>
+						<option value="Andorra" title="Andorra">Andorra</option>
+						<option value="Angola" title="Angola">Angola</option>
+						<option value="Anguilla" title="Anguilla">Anguilla</option>
+						<option value="Antarctica" title="Antarctica">Antarctica</option>
+						<option value="Antigua and Barbuda" title="Antigua and Barbuda">Antigua and Barbuda</option>
+						<option value="Argentina" title="Argentina">Argentina</option>
+						<option value="Armenia" title="Armenia">Armenia</option>
+						<option value="Aruba" title="Aruba">Aruba</option>
+						<option value="Australia" title="Australia">Australia</option>
+						<option value="Austria" title="Austria">Austria</option>
+						<option value="Azerbaijan" title="Azerbaijan">Azerbaijan</option>
+						<option value="Bahamas" title="Bahamas">Bahamas</option>
+						<option value="Bahrain" title="Bahrain">Bahrain</option>
+						<option value="Bangladesh" title="Bangladesh">Bangladesh</option>
+						<option value="Barbados" title="Barbados">Barbados</option>
+						<option value="Belarus" title="Belarus">Belarus</option>
+						<option value="Belgium" title="Belgium">Belgium</option>
+						<option value="Belize" title="Belize">Belize</option>
+						<option value="Benin" title="Benin">Benin</option>
+						<option value="Bermuda" title="Bermuda">Bermuda</option>
+						<option value="Bhutan" title="Bhutan">Bhutan</option>
+						<option value="Bolivia, Plurinational State of" title="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+						<option value="Bonaire, Sint Eustatius and Saba" title="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+						<option value="Bosnia and Herzegovina" title="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+						<option value="Botswana" title="Botswana">Botswana</option>
+						<option value="Bouvet Island" title="Bouvet Island">Bouvet Island</option>
+						<option value="Brazil" title="Brazil">Brazil</option>
+						<option value="British Indian Ocean Territory" title="British Indian Ocean Territory">British Indian Ocean Territory</option>
+						<option value="Brunei Darussalam" title="Brunei Darussalam">Brunei Darussalam</option>
+						<option value="Bulgaria" title="Bulgaria">Bulgaria</option>
+						<option value="Burkina Faso" title="Burkina Faso">Burkina Faso</option>
+						<option value="Burundi" title="Burundi">Burundi</option>
+						<option value="Cambodia" title="Cambodia">Cambodia</option>
+						<option value="Cameroon" title="Cameroon">Cameroon</option>
+						<option value="Canada" title="Canada">Canada</option>
+						<option value="Cape Verde" title="Cape Verde">Cape Verde</option>
+						<option value="Cayman Islands" title="Cayman Islands">Cayman Islands</option>
+						<option value="Central African Republic" title="Central African Republic">Central African Republic</option>
+						<option value="Chad" title="Chad">Chad</option>
+						<option value="Chile" title="Chile">Chile</option>
+						<option value="China" title="China">China</option>
+						<option value="Christmas Island" title="Christmas Island">Christmas Island</option>
+						<option value="Cocos (Keeling) Islands" title="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+						<option value="Colombia" title="Colombia">Colombia</option>
+						<option value="Comoros" title="Comoros">Comoros</option>
+						<option value="Congo" title="Congo">Congo</option>
+						<option value="Congo, the Democratic Republic of the" title="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the</option>
+						<option value="Cook Islands" title="Cook Islands">Cook Islands</option>
+						<option value="Costa Rica" title="Costa Rica">Costa Rica</option>
+						<option value="Côte d'Ivoire" title="Côte d'Ivoire">Côte d'Ivoire</option>
+						<option value="Croatia" title="Croatia">Croatia</option>
+						<option value="Cuba" title="Cuba">Cuba</option>
+						<option value="Curaçao" title="Curaçao">Curaçao</option>
+						<option value="Cyprus" title="Cyprus">Cyprus</option>
+						<option value="Czech Republic" title="Czech Republic">Czech Republic</option>
+						<option value="Denmark" title="Denmark">Denmark</option>
+						<option value="Djibouti" title="Djibouti">Djibouti</option>
+						<option value="Dominica" title="Dominica">Dominica</option>
+						<option value="Dominican Republic" title="Dominican Republic">Dominican Republic</option>
+						<option value="Ecuador" title="Ecuador">Ecuador</option>
+						<option value="Egypt" title="Egypt">Egypt</option>
+						<option value="El Salvador" title="El Salvador">El Salvador</option>
+						<option value="Equatorial Guinea" title="Equatorial Guinea">Equatorial Guinea</option>
+						<option value="Eritrea" title="Eritrea">Eritrea</option>
+						<option value="Estonia" title="Estonia">Estonia</option>
+						<option value="Ethiopia" title="Ethiopia">Ethiopia</option>
+						<option value="Falkland Islands (Malvinas)" title="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+						<option value="Faroe Islands" title="Faroe Islands">Faroe Islands</option>
+						<option value="Fiji" title="Fiji">Fiji</option>
+						<option value="Finland" title="Finland">Finland</option>
+						<option value="France" title="France">France</option>
+						<option value="French Guiana" title="French Guiana">French Guiana</option>
+						<option value="French Polynesia" title="French Polynesia">French Polynesia</option>
+						<option value="French Southern Territories" title="French Southern Territories">French Southern Territories</option>
+						<option value="Gabon" title="Gabon">Gabon</option>
+						<option value="Gambia" title="Gambia">Gambia</option>
+						<option value="Georgia" title="Georgia">Georgia</option>
+						<option value="Germany" title="Germany">Germany</option>
+						<option value="Ghana" title="Ghana">Ghana</option>
+						<option value="Gibraltar" title="Gibraltar">Gibraltar</option>
+						<option value="Greece" title="Greece">Greece</option>
+						<option value="Greenland" title="Greenland">Greenland</option>
+						<option value="Grenada" title="Grenada">Grenada</option>
+						<option value="Guadeloupe" title="Guadeloupe">Guadeloupe</option>
+						<option value="Guam" title="Guam">Guam</option>
+						<option value="Guatemala" title="Guatemala">Guatemala</option>
+						<option value="Guernsey" title="Guernsey">Guernsey</option>
+						<option value="Guinea" title="Guinea">Guinea</option>
+						<option value="Guinea-Bissau" title="Guinea-Bissau">Guinea-Bissau</option>
+						<option value="Guyana" title="Guyana">Guyana</option>
+						<option value="Haiti" title="Haiti">Haiti</option>
+						<option value="Heard Island and McDonald Islands" title="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+						<option value="Holy See (Vatican City State)" title="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+						<option value="Honduras" title="Honduras">Honduras</option>
+						<option value="Hong Kong" title="Hong Kong">Hong Kong</option>
+						<option value="Hungary" title="Hungary">Hungary</option>
+						<option value="Iceland" title="Iceland">Iceland</option>
+						<option value="India" title="India">India</option>
+						<option value="Indonesia" title="Indonesia">Indonesia</option>
+						<option value="Iran, Islamic Republic of" title="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+						<option value="Iraq" title="Iraq">Iraq</option>
+						<option value="Ireland" title="Ireland">Ireland</option>
+						<option value="Isle of Man" title="Isle of Man">Isle of Man</option>
+						<option value="Israel" title="Israel">Israel</option>
+						<option value="Italy" title="Italy">Italy</option>
+						<option value="Jamaica" title="Jamaica">Jamaica</option>
+						<option value="Japan" title="Japan">Japan</option>
+						<option value="Jersey" title="Jersey">Jersey</option>
+						<option value="Jordan" title="Jordan">Jordan</option>
+						<option value="Kazakhstan" title="Kazakhstan">Kazakhstan</option>
+						<option value="Kenya" title="Kenya">Kenya</option>
+						<option value="Kiribati" title="Kiribati">Kiribati</option>
+						<option value="Korea, Democratic People's Republic of" title="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+						<option value="Korea, Republic of" title="Korea, Republic of">Korea, Republic of</option>
+						<option value="Kuwait" title="Kuwait">Kuwait</option>
+						<option value="Kyrgyzstan" title="Kyrgyzstan">Kyrgyzstan</option>
+						<option value="Lao People's Democratic Republic" title="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+						<option value="Latvia" title="Latvia">Latvia</option>
+						<option value="Lebanon" title="Lebanon">Lebanon</option>
+						<option value="Lesotho" title="Lesotho">Lesotho</option>
+						<option value="Liberia" title="Liberia">Liberia</option>
+						<option value="Libya" title="Libya">Libya</option>
+						<option value="Liechtenstein" title="Liechtenstein">Liechtenstein</option>
+						<option value="Lithuania" title="Lithuania">Lithuania</option>
+						<option value="Luxembourg" title="Luxembourg">Luxembourg</option>
+						<option value="Macao" title="Macao">Macao</option>
+						<option value="Macedonia, the former Yugoslav Republic of" title="Macedonia, the former Yugoslav Republic of">Macedonia, the former Yugoslav Republic of</option>
+						<option value="Madagascar" title="Madagascar">Madagascar</option>
+						<option value="Malawi" title="Malawi">Malawi</option>
+						<option value="Malaysia" title="Malaysia">Malaysia</option>
+						<option value="Maldives" title="Maldives">Maldives</option>
+						<option value="Mali" title="Mali">Mali</option>
+						<option value="Malta" title="Malta">Malta</option>
+						<option value="Marshall Islands" title="Marshall Islands">Marshall Islands</option>
+						<option value="Martinique" title="Martinique">Martinique</option>
+						<option value="Mauritania" title="Mauritania">Mauritania</option>
+						<option value="Mauritius" title="Mauritius">Mauritius</option>
+						<option value="Mayotte" title="Mayotte">Mayotte</option>
+						<option value="Mexico" title="Mexico">Mexico</option>
+						<option value="Micronesia, Federated States of" title="Micronesia, Federated States of">Micronesia, Federated States of</option>
+						<option value="Moldova, Republic of" title="Moldova, Republic of">Moldova, Republic of</option>
+						<option value="Monaco" title="Monaco">Monaco</option>
+						<option value="Mongolia" title="Mongolia">Mongolia</option>
+						<option value="Montenegro" title="Montenegro">Montenegro</option>
+						<option value="Montserrat" title="Montserrat">Montserrat</option>
+						<option value="Morocco" title="Morocco">Morocco</option>
+						<option value="Mozambique" title="Mozambique">Mozambique</option>
+						<option value="Myanmar" title="Myanmar">Myanmar</option>
+						<option value="Namibia" title="Namibia">Namibia</option>
+						<option value="Nauru" title="Nauru">Nauru</option>
+						<option value="Nepal" title="Nepal">Nepal</option>
+						<option value="Netherlands" title="Netherlands">Netherlands</option>
+						<option value="New Caledonia" title="New Caledonia">New Caledonia</option>
+						<option value="New Zealand" title="New Zealand">New Zealand</option>
+						<option value="Nicaragua" title="Nicaragua">Nicaragua</option>
+						<option value="Niger" title="Niger">Niger</option>
+						<option value="Nigeria" title="Nigeria">Nigeria</option>
+						<option value="Niue" title="Niue">Niue</option>
+						<option value="Norfolk Island" title="Norfolk Island">Norfolk Island</option>
+						<option value="Northern Mariana Islands" title="Northern Mariana Islands">Northern Mariana Islands</option>
+						<option value="Norway" title="Norway">Norway</option>
+						<option value="Oman" title="Oman">Oman</option>
+						<option value="Pakistan" title="Pakistan">Pakistan</option>
+						<option value="Palau" title="Palau">Palau</option>
+						<option value="Palestinian Territory, Occupied" title="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+						<option value="Panama" title="Panama">Panama</option>
+						<option value="Papua New Guinea" title="Papua New Guinea">Papua New Guinea</option>
+						<option value="Paraguay" title="Paraguay">Paraguay</option>
+						<option value="Peru" title="Peru">Peru</option>
+						<option value="Philippines" title="Philippines">Philippines</option>
+						<option value="Pitcairn" title="Pitcairn">Pitcairn</option>
+						<option value="Poland" title="Poland">Poland</option>
+						<option value="Portugal" title="Portugal">Portugal</option>
+						<option value="Puerto Rico" title="Puerto Rico">Puerto Rico</option>
+						<option value="Qatar" title="Qatar">Qatar</option>
+						<option value="Réunion" title="Réunion">Réunion</option>
+						<option value="Romania" title="Romania">Romania</option>
+						<option value="Russian Federation" title="Russian Federation">Russian Federation</option>
+						<option value="Rwanda" title="Rwanda">Rwanda</option>
+						<option value="Saint Barthélemy" title="Saint Barthélemy">Saint Barthélemy</option>
+						<option value="Saint Helena, Ascension and Tristan da Cunha" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+						<option value="Saint Kitts and Nevis" title="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+						<option value="Saint Lucia" title="Saint Lucia">Saint Lucia</option>
+						<option value="Saint Martin (French part)" title="Saint Martin (French part)">Saint Martin (French part)</option>
+						<option value="Saint Pierre and Miquelon" title="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+						<option value="Saint Vincent and the Grenadines" title="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+						<option value="Samoa" title="Samoa">Samoa</option>
+						<option value="San Marino" title="San Marino">San Marino</option>
+						<option value="Sao Tome and Principe" title="Sao Tome and Principe">Sao Tome and Principe</option>
+						<option value="Saudi Arabia" title="Saudi Arabia">Saudi Arabia</option>
+						<option value="Senegal" title="Senegal">Senegal</option>
+						<option value="Serbia" title="Serbia">Serbia</option>
+						<option value="Seychelles" title="Seychelles">Seychelles</option>
+						<option value="Sierra Leone" title="Sierra Leone">Sierra Leone</option>
+						<option value="Singapore" title="Singapore">Singapore</option>
+						<option value="Sint Maarten (Dutch part)" title="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+						<option value="Slovakia" title="Slovakia">Slovakia</option>
+						<option value="Slovenia" title="Slovenia">Slovenia</option>
+						<option value="Solomon Islands" title="Solomon Islands">Solomon Islands</option>
+						<option value="Somalia" title="Somalia">Somalia</option>
+						<option value="South Africa" title="South Africa">South Africa</option>
+						<option value="South Georgia and the South Sandwich Islands" title="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+						<option value="South Sudan" title="South Sudan">South Sudan</option>
+						<option value="Spain" title="Spain">Spain</option>
+						<option value="Sri Lanka" title="Sri Lanka">Sri Lanka</option>
+						<option value="Sudan" title="Sudan">Sudan</option>
+						<option value="Suriname" title="Suriname">Suriname</option>
+						<option value="Svalbard and Jan Mayen" title="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+						<option value="Swaziland" title="Swaziland">Swaziland</option>
+						<option value="Sweden" title="Sweden">Sweden</option>
+						<option value="Switzerland" title="Switzerland">Switzerland</option>
+						<option value="Syrian Arab Republic" title="Syrian Arab Republic">Syrian Arab Republic</option>
+						<option value="Taiwan, Province of China" title="Taiwan, Province of China">Taiwan, Province of China</option>
+						<option value="Tajikistan" title="Tajikistan">Tajikistan</option>
+						<option value="Tanzania, United Republic of" title="Tanzania, United Republic of">Tanzania, United Republic of</option>
+						<option value="Thailand" title="Thailand">Thailand</option>
+						<option value="Timor-Leste" title="Timor-Leste">Timor-Leste</option>
+						<option value="Togo" title="Togo">Togo</option>
+						<option value="Tokelau" title="Tokelau">Tokelau</option>
+						<option value="Tonga" title="Tonga">Tonga</option>
+						<option value="Trinidad and Tobago" title="Trinidad and Tobago">Trinidad and Tobago</option>
+						<option value="Tunisia" title="Tunisia">Tunisia</option>
+						<option value="Turkey" title="Turkey">Turkey</option>
+						<option value="Turkmenistan" title="Turkmenistan">Turkmenistan</option>
+						<option value="Turks and Caicos Islands" title="Turks and Caicos Islands">Turks and Caicos Islands</option>
+						<option value="Tuvalu" title="Tuvalu">Tuvalu</option>
+						<option value="Uganda" title="Uganda">Uganda</option>
+						<option value="Ukraine" title="Ukraine">Ukraine</option>
+						<option value="United Arab Emirates" title="United Arab Emirates">United Arab Emirates</option>
+						<option value="United Kingdom" title="United Kingdom">United Kingdom</option>
+						<option value="United States" title="United States">United States</option>
+						<option value="United States Minor Outlying Islands" title="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+						<option value="Uruguay" title="Uruguay">Uruguay</option>
+						<option value="Uzbekistan" title="Uzbekistan">Uzbekistan</option>
+						<option value="Vanuatu" title="Vanuatu">Vanuatu</option>
+						<option value="Venezuela, Bolivarian Republic of" title="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+						<option value="Viet Nam" title="Viet Nam">Viet Nam</option>
+						<option value="Virgin Islands, British" title="Virgin Islands, British">Virgin Islands, British</option>
+						<option value="Virgin Islands, U.S." title="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+						<option value="Wallis and Futuna" title="Wallis and Futuna">Wallis and Futuna</option>
+						<option value="Western Sahara" title="Western Sahara">Western Sahara</option>
+						<option value="Yemen" title="Yemen">Yemen</option>
+						<option value="Zambia" title="Zambia">Zambia</option>
+						<option value="Zimbabwe" title="Zimbabwe">Zimbabwe</option>
+					</select>
+				</div>
+			</div>
+			<div data-row-span="4">
+				<div data-field-span="2" data-field-error="Please enter a valid email address">
+					<label>E-mail</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Mobile No.</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Existing Bank Account No. (if any)</label>
+					<input type="text">
+				</div>
+			</div>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>In case of a minor please provide details (Name of parent and natural guardian)</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Name of father/spouse</label>
+					<input type="text">
+				</div>
+			</div>
+
+			<br>
+			<fieldset>
+				<legend>Residential address</legend>
+				<div data-row-span="2">
+					<div data-field-span="1">
+						<label>Flat no. and bldg. name</label>
+						<input type="text">
+					</div>
+					<div data-field-span="1">
+						<label>Road no./name</label>
+						<input type="text">
+					</div>
+				</div>
+				<div data-row-span="4">
+					<div data-field-span="3">
+						<label>Area and landmark</label>
+						<input type="text">
+					</div>
+					<div data-field-span="1">
+						<label>City</label>
+						<input type="text">
+					</div>
+				</div>
+				<div data-row-span="4">
+					<div data-field-span="1">
+						<label>Telephone Residence</label>
+						<input type="text">
+					</div>
+					<div data-field-span="1">
+						<label>Office</label>
+						<input type="text">
+					</div>
+					<div data-field-span="1">
+						<label>Fax</label>
+						<input type="text">
+					</div>
+					<div data-field-span="1">
+						<label>Pin code</label>
+						<input type="text">
+					</div>
+				</div>
+			</fieldset>
+		</fieldset>
+		<br>
+
+		<fieldset>
+			<legend>Mailing Address (If different from the First Accountholder's address)</legend>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>Company name and department/ Flat no. and bldg. name</label>
+					<input type="text">
+				</div>
+			</div>
+			<div data-row-span="4">
+				<div data-field-span="1">
+					<label>Road no./name</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Area and landmark</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>City</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Pin Code</label>
+					<input type="text">
+				</div>
+			</div>
+			<div data-row-span="4">
+				<div data-field-span="1">
+					<label>Telephone Residence</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Office</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Fax</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Mobile No.</label>
+					<input type="text">
+				</div>
+			</div>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>E-mail</label>
+					<input type="text">
+				</div>
+			</div>
+		</fieldset>
+
+		<br><br>
+
+		<fieldset>
+			<legend>Details of Introduction by Existing Customer (If applicable)</legend>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>Customer Name</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Account No.</label>
+					<input type="text">
+				</div>
+			</div>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>Introducer's signature</label>
+					<textarea></textarea>
+				</div>
+			</div>
+		</fieldset>
+
+		<br><br>
+
+		<fieldset>
+			<legend>Account Details</legend>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>Choice of account</label>
+					<label><input type="checkbox"> Savings</label> &nbsp;
+					<label><input type="checkbox"> Current</label> &nbsp;
+					<label><input type="checkbox"> Fixed deposits</label>
+				</div>
+				<div data-field-span="1">
+					<label>Mode of funding</label>
+					<label><input type="checkbox"> Cash</label> &nbsp;
+					<label><input type="checkbox"> Cheque</label> &nbsp;
+					<label><input type="checkbox"> NEFT</label>
+				</div>
+			</div>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>Amount</label>
+					<input type="text">
+				</div>
+			</div>
+			<br>
+			<fieldset>
+				<legend>Details of Fixed Deposit</legend>
+				<div data-row-span="2">
+					<div data-field-span="1">
+						<label>Types of deposit</label>
+						<label><input type="checkbox"> Ordinary</label> &nbsp;
+						<label><input type="checkbox"> Cumulative</label>
+					</div>
+					<div data-field-span="1">
+						<label>Mode of funding</label>
+						<label><input type="checkbox"> Cash</label> &nbsp;
+						<label><input type="checkbox"> Cheque</label> &nbsp;
+						<label><input type="checkbox"> NEFT</label>
+					</div>
+				</div>
+				<div data-row-span="4">
+					<div data-field-span="2">
+						<label>Amount</label>
+						<input type="text">
+					</div>
+					<div data-field-span="1">
+						<label>No. of deposits</label>
+						<input type="text">
+					</div>
+					<div data-field-span="1">
+						<label>Individual Deposit Amount</label>
+						<input type="text">
+					</div>
+				</div>
+			</fieldset>
+		</fieldset>
+
+		<br><br>
+		<fieldset>
+			<legend>Personal Details</legend>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>Occupation</label>
+					<label><input type="checkbox"> Non-executive</label> &nbsp;
+					<label><input type="checkbox"> Housewife</label> &nbsp;
+					<label><input type="checkbox"> Retired</label> &nbsp;
+					<label><input type="checkbox"> Student</label> &nbsp;
+					<label><input type="checkbox"> Other</label> &nbsp;
+					<label><input type="checkbox"> Unemployed</label>
+				</div>
+			</div>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label>Job Title</label>
+					<input type="text">
+				</div>
+			</div>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>Department</label>
+					<input type="text">
+				</div>
+				<div data-field-span="1">
+					<label>Nature of business</label>
+					<input type="text">
+				</div>
+			</div>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>Education</label>
+					<label><input type="checkbox"> Under graduate</label> &nbsp;
+					<label><input type="checkbox"> Graduate</label> &nbsp;
+					<label><input type="checkbox"> Others</label>
+				</div>
+				<div data-field-span="1">
+					<label>Monthly Income</label>
+					<label><input type="checkbox"> Zero Income</label> &nbsp;
+					<label><input type="checkbox"> Less than $10,000</label> &nbsp;
+					<label><input type="checkbox"> $10,000+</label>
+				</div>
+			</div>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>Maritial Status</label>
+					<label><input type="checkbox"> Married</label> &nbsp;
+					<label><input type="checkbox"> Single</label>
+				</div>
+				<div data-field-span="1">
+					<label>Spouse name</label>
+					<input type="text">
+				</div>
+			</div>
+			<br>
+			<fieldset>
+				<legend>Other existing bank accounts, if any</legend>
+				<div data-row-span="2">
+					<div data-field-span="1">
+						<label>Name of the Bank / branch</label>
+						<input type="text">
+					</div>
+					<div data-field-span="1">
+						<label>Name of the Bank / branch</label>
+						<input type="text">
+					</div>
+				</div>
+			</fieldset>
+		</fieldset>
+		<br><br>
+		<fieldset>
+			<legend>Reason for Account opening</legend>
+			<div data-row-span="2">
+				<div data-field-span="1">
+					<label>Please specify</label>
+					<input type="text">
+				</div>
+			</div>
+		</fieldset>
+		<br><br>
+		<fieldset>
+			<legend>Terms And Conditions</legend>
+			<div data-row-span="1">
+				<div data-field-span="1">
+					<label></label>
+					<label><input type="checkbox"> I/We confirm having read and understood the account rules of The Banking Corporation Limited ('the Bank'), and hereby agree to be bound by the terms and conditions and amendments governing the account(s) issued by the Bank from time-to-time.</label>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+	<br><br><br><br><br>
+</div>
+</div>

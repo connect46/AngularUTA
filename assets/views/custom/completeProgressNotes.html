@@ -31,7 +31,7 @@
                                         <th class="hidden-xs">Program</th>
                                         <th>Service Item</th>
                                         <th>PN Template Name</th>
-                                        <th class="hidden-xs">Started Date</th>
+                                        <th class="text-center">Started Date</th>
                                         <th class="text-center">Due Date</th>
                                         <th class="text-center">Submitted Date</th>
                                         <td>Status</td>
@@ -39,154 +39,61 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <!-- Overdue note -->
                                     <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Eugene Burke</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">Contact Note</td>
-                                        <td class="hidden-xs"><b style="color:red">10/05/2017</b></td>
+                                        <td><b>Carson Palmer</b></td>
+                                        <td>CFS</td>
+                                        <td>Case Management</td>
+                                        <td>CFT Note</td>
+                                        <td class="text-center">10/01/2017</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">10/08/2017</a>
+                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">10/04/2017</a>
                                             </div>
                                         </td>
+                                        <td class="text-center"></td>
                                         <td>In Progress</td>
                                         <td class="text-center">
                                             <div class="btn-group">
                                                 <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-pencil"></i>  Edit</a>
+                                            </div> 
+                                        </td>
+                                    </tr>
+                                    <!-- End Overdue note -->
+                                    <!-- Late Submitted note -->
+                                    <tr>
+                                        <td><b>Adam Dye</b></td>
+                                        <td>CFS</td>
+                                        <td>Case Management</td>
+                                        <td>CFT Note</td>
+                                        <td class="text-center">10/01/2017</td>
+                                        <td class="text-center"></td>
+                                        <td class="text-center"><b style="color: red">10/05/2017</b></td>
+                                        <td>Synched</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-eye"></i>  View</a>
                                             </div>
                                         </td>
                                     </tr>
+                                    <!-- END Late Submitted note -->   
+                                    <!-- Note submitted on-time or early -->
                                     <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Eugene Burke</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">10/05/2017</td>
+                                        <td><b>Adam Dye</b></td>
+                                        <td>CFS</td>
+                                        <td>Case Management</td>
+                                        <td>Contact Note</td>
+                                        <td class="text-center">10/01/2017</td>
+                                        <td class="text-center"></td>
+                                        <td class="text-center"><b style="color: green">10/03/2017</b></td>
+                                        <td>Synched</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">10/08/2017</a>
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-eye"></i>  View</a>
                                             </div>
                                         </td>
-                                        <td>In Progress</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-pencil"></i>  Edit </a>
-                                            </div>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Carson Palmer</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">10/04/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-warning" type="button" data-toggle="tooltip" title="Overdue">10/07/2017</a>
-                                            </div>
-                                        </td>
-                                        <td>In Progress</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-pencil"></i>  Edit</a>
-                                            </div>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Mark Tannenbaum</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">10/07/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                10/10/2017
-                                        </td>
-                                        <td>In Progress</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="" ng-click="LaunchPage('viewPN');"><i class="fa fa-pencil"></i>  Edit </a>
-                                            </div>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">George Carlin</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">Case Contact</td>
-                                        <td class="hidden-xs">10/01/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                10/06/2017
-                                        </td>
-                                        <td>                                            
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-primary" type="button" data-toggle="tooltip" title="Overdue">Submitted</a>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href=""><i class="fa fa-eye"></i>  View </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Thomas George</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">Case Contact</td>
-                                        <td class="hidden-xs">10/07/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                10/10/2017
-                                        </td>
-                                        <td>                                            
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-primary" type="button" data-toggle="tooltip" title="Overdue">Submitted</a>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href=""><i class="fa fa-eye"></i>  View </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">George Carlin</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">10/07/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                10/10/2017
-                                        </td>
-                                        <td>                                            
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-primary" type="button" data-toggle="tooltip" title="Overdue">Submitted</a>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href=""><i class="fa fa-eye"></i>  View </a>
-                                            </div>
-                                        </td>
-                                    </tr>                                      
+                                    </tr>                                    
+                                    <!-- END Note submitted on-time or early -->
                                 </tbody>
                             </table>
                         </div>
