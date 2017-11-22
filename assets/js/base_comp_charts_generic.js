@@ -38,7 +38,7 @@ var BaseCompCharts = function() {
 			//now set data for charts
 			var $chartLinesData = {
 				my_line_chart_01:{ //BP
-					labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL'],
+					labels: ['', '', '', '', '', '', ''],
 					datasets: [
 						{
 							label: 'Systolic',
@@ -233,7 +233,7 @@ var BaseCompCharts = function() {
 			//now set data for charts
 			var $chartBarsData = {
 				my_bar_chart_01:{
-					labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL'],
+					labels: ['', '', '', '', '', '', ''],
 					datasets: [
 						{
 							label: 'Last Week',
@@ -792,4 +792,4 @@ var BaseCompCharts = function() {
 }();
 
 // Initialize when page loads
-jQuery(function(){ BaseCompCharts.init(); });
+jQuery(function(){ BaseCompCharts.init();});

@@ -71,7 +71,9 @@ App.config(['$stateProvider', '$urlRouterProvider',
                                 'assets/js/plugins/dropzonejs/dropzone.min.js',
                                 'assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js',
                                 'assets/css/gridforms.css',
-                                'assets/js/gridforms.js'
+                                'assets/js/gridforms.js',
+                                'assets/js/plugins/bootstrap-treeview/bootstrap-treeview.min.js',
+                                'assets/js/plugins/bootstrap-treeview/bootstrap-treeview.min.css'
                             ]
                         });
                     }]
@@ -118,7 +120,11 @@ App.config(['$stateProvider', '$urlRouterProvider',
                                 'assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.js',
                                 'assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js',
                                 'assets/js/plugins/dropzonejs/dropzone.min.js',
-                                'assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js'
+                                'assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js',
+                                'assets/css/gridforms.css',
+                                'assets/js/gridforms.js',
+                                'assets/js/plugins/bootstrap-treeview/bootstrap-treeview.min.js',
+                                'assets/js/plugins/bootstrap-treeview/bootstrap-treeview.min.css'
                             ]
                         });
                     }]
@@ -165,7 +171,11 @@ App.config(['$stateProvider', '$urlRouterProvider',
                                 'assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.js',
                                 'assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js',
                                 'assets/js/plugins/dropzonejs/dropzone.min.js',
-                                'assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js'
+                                'assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js',
+                                'assets/css/gridforms.css',
+                                'assets/js/gridforms.js',
+                                'assets/js/plugins/bootstrap-treeview/bootstrap-treeview.min.js',
+                                'assets/js/plugins/bootstrap-treeview/bootstrap-treeview.min.css'
                             ]
                         });
                     }]

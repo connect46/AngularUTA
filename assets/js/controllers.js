@@ -244,10 +244,24 @@ App.controller('LoginCtrl', ['$scope', '$rootScope','$localStorage','$state','$s
         var $globalOptions = {
             scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
             scaleFontColor: '#999',
-            scaleFontStyle: '600',
+            scaleFontStyle: '200',
             tooltipTitleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-            tooltipCornerRadius: 3,
+            tooltipCornerRadius: 1,
             maintainAspectRatio: false,
+            options: {
+                elements :{
+                    line: {
+                        borderWidth: 1
+                    },
+                    point: {
+                        radius: 0
+                    }
+                },
+                scales: {
+                    yAxes: [{
+                        display: false }]
+                }
+            },
             responsive: true
         };
 		//process line type
@@ -599,11 +613,10 @@ App.controller('LoginCtrl', ['$scope', '$rootScope','$localStorage','$state','$s
 		
 		if ((jquery_chk!=null) && (jquery_chk.length>0)){
 			jQuery('.js-slc-bar1').sparkline('html', $barOptions); //bmi
-
+        }
 			$barOptions['barColor']         = '#abe37d';
 			$barOptions['tooltipPrefix']    = '';
-			$barOptions['tooltipSuffix']    = ' BeatsPM';
-		}	
+			$barOptions['tooltipSuffix']    = ' BeatsPM';	
 		
 		jquery_chk=jQuery('.js-slc-bar2');
 		if ((jquery_chk!=null) && (jquery_chk.length>0)){
@@ -741,9 +754,8 @@ App.controller('LoginCtrl', ['$scope', '$rootScope','$localStorage','$state','$s
 		
 		/*jQuery('.nav-tabs li a').on('shown.bs.tab', function (e) {
 				// add the related JS code init sparkline (found in js/pages/base_comp_charts.js)
-				alert("tab shown");
-				$scope.initDynamic();
-			});*/
+				$.sparkline_display_visible();
+			});
 		/*jQuery(function () {
 			$('.nav-tabs a').on('shown.bs.tab', function (e) {
 				// add the related JS code init sparkline (found in js/pages/base_comp_charts.js)
